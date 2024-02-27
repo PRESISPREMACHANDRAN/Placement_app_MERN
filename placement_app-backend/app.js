@@ -14,22 +14,20 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(
-  {
-    origin:["https://deploy-mern-1whq.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-  }
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
 ));
-
 // MongoDB Connection
 mongoose.connect(
   "mongodb+srv://presi123:presi123@cluster0.dfo33ti.mongodb.net/PlacementDB?retryWrites=true&w=majority"
 );
 
 
-app.post("/",(req,res)
-=>{
-  res.json("Hello...")
+app.get("/", (req, res) => {
+    res.json("Hello");
 })
 
 
