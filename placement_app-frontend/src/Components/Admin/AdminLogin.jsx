@@ -19,7 +19,7 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://54.173.32.19:4000/adminLogin",
+        "http://localhost:4000/adminLogin",
         data
       );
       const responseData = response.data;
@@ -44,7 +44,7 @@ const AdminLogin = () => {
           // case "Computer Science":
           //   navigate("/cybersecurity");
           //   break;
-          
+
           default:
             break;
         }
@@ -112,7 +112,6 @@ const AdminLogin = () => {
                 <option value="MCA">MCA</option>
                 <option value="ELECTRONICS">ELECTRONICS</option>
                 {/* <option value="COMPUTER SCIENCE">COMPUTER SCINCE</option> */}
-               
               </select>
             </div>
             <button type="submit" className="btn btn-primary">

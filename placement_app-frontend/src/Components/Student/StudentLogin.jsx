@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
 
 const StudentLogin = () => {
- 
   const [data, changeData] = useState({
     email: "",
     password: "",
@@ -19,7 +18,7 @@ const StudentLogin = () => {
 
   const submitValue = () => {
     axios
-      .post("http://54.173.32.19:4000/studentLogin", data)
+      .post("http://localhost:4000/studentLogin", data)
       .then((response) => {
         if (response.data.data.length === 0) {
           alert("Email or password incorrect");
@@ -86,8 +85,7 @@ const StudentLogin = () => {
           </div>
         </div>
       </div>
-      <Footer/>
-    
+      <Footer />
     </>
   );
 };

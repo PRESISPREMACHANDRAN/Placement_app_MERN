@@ -9,7 +9,7 @@ const IT = () => {
 
   const fetchData = () => {
     axios
-      .post("http://54.173.32.19:4000/viewStudent", { stream: "IT" })
+      .post("http://localhost:4000/viewStudent", { stream: "IT" })
       .then((response) => {
         changeData(response.data);
       });
@@ -20,7 +20,7 @@ const IT = () => {
   }, []);
   return (
     <>
-    <AdminHeader/>
+      <AdminHeader />
       <div className="container">
         <div className="row">
           <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -61,13 +61,12 @@ const IT = () => {
                     })}
                   </tbody>
                 </table>
-                <AdminDashboard/>
+                <AdminDashboard />
               </div>
             </div>
           </div>
         </div>
       </div>
-     
     </>
   );
 };
