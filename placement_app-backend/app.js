@@ -26,7 +26,14 @@ mongoose.connect(
   "mongodb+srv://presi123:presi123@cluster0.dfo33ti.mongodb.net/PlacementDB?retryWrites=true&w=majority"
 );
 
-// Route for student login
+
+app.post("/",(req,res)
+=>{
+  res.json("Hello...")
+})
+
+
+  // Route for student login
 app.post("/studentLogin", async (req, res) => {
   try {
     var { email, password } = req.body;
